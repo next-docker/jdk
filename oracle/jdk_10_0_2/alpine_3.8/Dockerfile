@@ -27,7 +27,7 @@ RUN ls -lrt /opt/java/; ls -lrt $JAVA_HOME
 RUN tar -xf ${JAVA_BASE_DIR}/jdk.tar.gz --directory ${JAVA_BASE_DIR};
 RUN ls -lrt ${JAVA_BASE_DIR} 
 RUN mv ${JAVA_BASE_DIR}/jdk-10.0.2/* ${JAVA_HOME} ;
-RUN ls -lrt ${JAVA_BASE_DIR}; ls -lrt $JAVA_HOME
+RUN ls -lrt ${JAVA_BASE_DIR}; ls -lrt $JAVA_HOME; ls -lrth /var/cache/apk/; ls -lrt /tmp/
 RUN rm -f ${JAVA_BASE_DIR}/jdk.tar.gz; rm -fR ${JAVA_BASE_DIR}/jdk-10.0.2
-RUN rm -f ${JAVA_HOME}/*src.zip;rm -fR ${JAVA_HOME}/jre;
+RUN rm -f ${JAVA_HOME}/*src.zip;rm -fR ${JAVA_HOME}/jre;rm -fR /tmp/* ; rm -fR /var/cache/apk/*
 RUN ls -lrt /opt/java/; ls -lrt $JAVA_HOME

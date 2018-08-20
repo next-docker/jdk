@@ -61,9 +61,9 @@ echo "RUN ls -lrt /opt/java/; ls -lrt \$JAVA_HOME"
 echo "RUN tar -xf \${JAVA_BASE_DIR}/jdk.tar.gz --directory \${JAVA_BASE_DIR};"
 echo "RUN ls -lrt \${JAVA_BASE_DIR} "
 echo "RUN mv \${JAVA_BASE_DIR}/${JAVA_UNARCHIVE_DIR}/* \${JAVA_HOME} ;"
-echo "RUN ls -lrt \${JAVA_BASE_DIR}; ls -lrt \$JAVA_HOME"
+echo "RUN ls -lrt \${JAVA_BASE_DIR}; ls -lrt \$JAVA_HOME; ls -lrth /var/cache/apk/; ls -lrt /tmp/"
 echo "RUN rm -f \${JAVA_BASE_DIR}/jdk.tar.gz; rm -fR \${JAVA_BASE_DIR}/${JAVA_UNARCHIVE_DIR}"
-echo "RUN rm -f \${JAVA_HOME}/*src.zip;rm -fR \${JAVA_HOME}/jre;"
+echo "RUN rm -f \${JAVA_HOME}/*src.zip;rm -fR \${JAVA_HOME}/jre;rm -fR /tmp/* ; rm -fR /var/cache/apk/*"
 echo "RUN ls -lrt /opt/java/; ls -lrt \$JAVA_HOME"
 
 
