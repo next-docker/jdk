@@ -13,7 +13,10 @@ ENV JAVA_DIR jdk-14.0.1
 ENV JAVA_HOME /opt/java/${JAVA_DIR}
 
 
-ENV JAVA_DOWLOAD_URL https://download.java.net/java/GA/jdk14.0.1/664493ef4a6946b186ff29eb326336a2/7/GPL/openjdk-14.0.1_linux-x64_bin.tar.gz
+ENV JAVA_DOWLOAD_URL https://download.java.net/java/early_access/alpine/10/binaries/openjdk-15-ea+10_linux-x64-musl_bin.tar.gz
+#Overwriting JDK version as 14.01 JDK is not available and we need to use 15
+ENV JAVA_DIR jdk-15
+ENV JAVA_HOME /opt/java/${JAVA_DIR}
 
 
 RUN apk --update add curl ca-certificates tar
