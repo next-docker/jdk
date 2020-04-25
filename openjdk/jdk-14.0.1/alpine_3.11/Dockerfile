@@ -27,3 +27,4 @@ RUN rm -f ${JAVA_BASE_DIR}/jdk.tar.gz;
 RUN rm -f ${JAVA_HOME}/*src.zip;rm -fR ${JAVA_HOME}/jre;rm -fR /tmp/* ; rm -fR /var/cache/apk/*;rm -fR /home/ravi/work/tools/java/current/legal
 RUN ls -lrt /opt/java/; ls -lrt $JAVA_HOME
 RUN df -h; du -h -d 1 /opt/java/; echo check $JAVA_HOME; du -h -d 1 $JAVA_HOME; echo check temp; du -h -d 1 /tmp; du -h -d 1 /; ls -lrt $JAVA_HOME
+ENV PATH ${PATH}:${JAVA_HOME}/bin

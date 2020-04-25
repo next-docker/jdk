@@ -14,6 +14,7 @@ ENV JAVA_HOME /opt/java/${JAVA_DIR}
 
 
 ENV JAVA_DOWNLOAD_URL https://download.java.net/java/early_access/jdk15/19/GPL/openjdk-15-15-ea+19_linux-x64_bin.tar.gz
+ENV PATH ${PATH}:${JAVA_HOME}/bin
 
 
 

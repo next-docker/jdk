@@ -66,7 +66,7 @@ echo "RUN rm -f \${JAVA_BASE_DIR}/jdk.tar.gz; rm -fR \${JAVA_BASE_DIR}/${JAVA_UN
 echo "RUN rm -f \${JAVA_HOME}/*src.zip;rm -fR \${JAVA_HOME}/jre;rm -fR /tmp/* ; rm -fR /var/cache/apk/*"
 echo "RUN ls -lrt /opt/java/; ls -lrt \$JAVA_HOME"
 
-
+echo "ENV PATH \${PATH}:\${JAVA_HOME}/bin"
 
 
 

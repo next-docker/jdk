@@ -42,7 +42,7 @@ else
 echo "ENV JAVA_DOWNLOAD_URL https://download.java.net/java/early_access/jdk15/19/GPL/open${PARAM_OPEN_JDK_VERSION}-15-ea+19_linux-x64_bin.tar.gz"
 fi
 
-
+echo "ENV PATH \${PATH}:\${JAVA_HOME}/bin"
 
 echo ""
 echo ""
